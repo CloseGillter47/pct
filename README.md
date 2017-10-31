@@ -1,11 +1,20 @@
 # pct
 
-> A Vue.js project
+## 一款专门给后台管理系统使用的UI框架
 
-## Build Setup
+> 集成基本的工具，包括基本的工具集，后台通信等，开发人员只需要专注于业务部分，开箱即用！
+
+### 技术栈
+* vue@2.5.2;
+* vue-cli@2.9.1;
+* vue-routher@3.0.1;
+* Element-UI@2.0.1;
+
+
+## 使用方法（参考[vue-cli](https://github.com/vuejs/vue-cli)）
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
 # serve with hot reload at localhost:8080
@@ -28,3 +37,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 ### [Element UI](http://element-cn.eleme.io/#/zh-CN)
+
+## 项目结构说明
+
+基本是有两套，一套是系统基础部分，另一套是具体业务部分；
