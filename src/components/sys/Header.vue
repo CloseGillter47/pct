@@ -19,7 +19,7 @@ export default {
   width: 100%;
   height: 100%;
   max-height: 54px;
-  background: #409eff;
+  background: $primaryColor;
   z-index: 1000;
   
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),

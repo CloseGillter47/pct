@@ -20,9 +20,31 @@ exports.cssLoaders = function (options) {
       sourceMap: options.sourceMap
     }
   }
+  // 自行添加
+  function resolveResouce(name) {
+    return path.resolve(__dirname, '../src/styles/' + name);
+  }
+
+  // 自行添加 --- 使sass 变量全局化
+  function generateSassResourceLoader() {
+    var loaders = [
+      cssLoader,
+      // 'postcss-loader',
+      'sass-loader',
+      {
+        loader: 'sass-resources-loader',
+        options: {
+          // it need a absolute path
+          resources: [resolveResouce('index.scss'), /*resolveResouce('mixins.scss')*/]
+        }
+      }
+    ];
+    
+    return options.extract ? ExtractTextPlugin.extract({ use: loaders, fallback: 'vue-style-loader' }) : ['vue-style-loader'].concat(loaders);
+  }
 
   // generate loader string to be used with extract text plugin
-  function generateLoaders (loader, loaderOptions) {
+  function generateLoaders(loader, loaderOptions) {
     const loaders = [cssLoader]
     if (loader) {
       loaders.push({
@@ -50,8 +72,14 @@ exports.cssLoaders = function (options) {
     css: generateLoaders(),
     postcss: generateLoaders(),
     less: generateLoaders('less'),
-    sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass'),
+    // 官方原版
+    // sass: generateLoaders('sass', { indentedSyntax: true }),
+    // scss: generateLoaders('sass'),
+
+    // 自行添加
+    sass: generateSassResourceLoader(),
+    scss: generateSassResourceLoader(),
+    
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }
