@@ -1,6 +1,16 @@
 <template>
-  <div class="header-layout">
-    <inso-header></inso-header>
+  <div class="container-layout">
+    <div class="header-layout">
+      <inso-header></inso-header>
+    </div>
+    <div class="bodyer-layout">
+      <div class="asider-layout">
+
+      </div>
+      <div class="mainer-layout">
+
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,10 +32,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container-layout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  @include flex-box($justify:flex-start);
+}
+
 .header-layout {
   width: 100%;
-  height: 96px;
+  height: $headerHeight;
   position: relative;
+}
+
+.bodyer-layout {
+  width: 100%;
+  flex-grow: 2;
 }
 </style>
 

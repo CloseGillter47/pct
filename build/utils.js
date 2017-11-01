@@ -35,11 +35,11 @@ exports.cssLoaders = function (options) {
         loader: 'sass-resources-loader',
         options: {
           // it need a absolute path
-          resources: [resolveResouce('index.scss'), /*resolveResouce('mixins.scss')*/]
+          resources: [resolveResouce('index.scss'), resolveResouce('mixins.scss')]
         }
       }
     ];
-    
+
     return options.extract ? ExtractTextPlugin.extract({ use: loaders, fallback: 'vue-style-loader' }) : ['vue-style-loader'].concat(loaders);
   }
 
@@ -79,7 +79,7 @@ exports.cssLoaders = function (options) {
     // 自行添加
     sass: generateSassResourceLoader(),
     scss: generateSassResourceLoader(),
-    
+
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }
