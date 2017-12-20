@@ -1,3 +1,35 @@
 $headerHeight: 54px;
-
 $primaryColor:#409eff;
+.flex-box {
+  display: flex;
+}
+
+.flex-box.rowspan {
+  flex-direction: row;
+}
+
+.flex-box.unrowspan {
+  flex-direction: row-reverse;
+}
+
+.flex-box.colspan {
+  flex-direction: column;
+}
+
+.flex-box.uncolspan {
+  flex-direction: column-reverse;
+}
+
+.flex-box.center-item {
+  align-items: center;
+}
+
+.flex-box.start-cotx {
+  justify-content: flex-start;
+}
+.flex-box.center-cotx {
+  justify-content: center;
+}
+.flex-box.end-cotx {
+  justify-content: flex-end;
+}
