@@ -3,6 +3,7 @@
     <slot></slot>
     <div class="badge-content">
       <div class="_badge ali-top ali-right" v-if="mode==='number'">{{count}}</div>
+      <div class="_badge ali-top ali-right is-text no-p" v-if="mode==='text'"><span>{{text}}</span></div>
       <div class="_badge ali-top ali-right no-text" v-if="mode==='mini'"></div>
     </div>
   </div>
@@ -18,10 +19,13 @@ export default {
   },
   props: {
     mode: {
-      default: "number"
+      default: "text"
     },
     count: {
       default: 1
+    },
+    text:{
+      default:"新"
     }
   }
 };
@@ -82,6 +86,18 @@ export default {
 }
 ._badge.no-text.ali-left {
   left: 6px;
+}
+._badge.is-text.no-p {
+  font-size: 10px;
+  padding:1px;
+}
+._badge.is-text.p4 {
+  padding-left:4px;
+  padding-right:4px;
+}
+._badge.is-text span {
+  display: inline-block;
+  font-size: 12px;
 }
 </style>
 <style scoped>
