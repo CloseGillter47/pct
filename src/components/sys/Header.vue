@@ -1,31 +1,34 @@
 <template>
   <div class="header-box">
     <div class="logo-content">
-
+      Kuroko
     </div>
     <div class="title-content">
-
+      <div class="_tool-left">
+        <icon-btn icon="el-icon-arrow-left"/>
+      </div>
+      <div class="_title-center">
+        人工智障系统
+      </div>
+      <div class="_tool-right">
+        <icon-btn icon="el-icon-arrow-right"/>
+      </div>
     </div>
     <div class="tool-content">
-      <icon-btn/>
-      <!-- <el-dropdown trigger="click">
-        <span class="el-dropdown-link">
-          下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>黄金糕</el-dropdown-item>
-          <el-dropdown-item>狮子头</el-dropdown-item>
-          <el-dropdown-item>螺蛳粉</el-dropdown-item>
-          <el-dropdown-item>双皮奶</el-dropdown-item>
-          <el-dropdown-item>蚵仔煎</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown> -->
+      <icon-btn icon="el-icon-search"/>
+      <kur-badge>
+        <icon-btn icon="el-icon-bell"/>
+      </kur-badge>
+      <icon-btn icon="el-icon-goods"/>
+      <icon-btn icon="el-icon-more"/>
+      
     </div>
   </div>
 </template>
 
 <script>
 import iconBtn from "./IconButton.vue";
+import kurBadge from "./Badge.vue";
 export default {
   name: "InsoHeader",
   data() {
@@ -33,7 +36,8 @@ export default {
   },
 
   components: {
-    iconBtn
+    iconBtn,
+    kurBadge
   }
 };
 </script>
@@ -46,6 +50,8 @@ export default {
   background: $primaryColor;
   z-index: 1000;
 
+  color: #fff;
+
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
     0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -55,17 +61,52 @@ export default {
   .logo-content {
     width: 200px;
     height: 100%;
-    background: wheat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-style: oblique;
   }
   .title-content {
     flex-grow: 2;
     height: 100%;
-    background: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    ._tool-left {
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+    ._title-center {
+      padding-left: 2px;
+      padding-right: 2px;
+      flex-grow: 2;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    ._title-center.text-ali-left {
+      justify-content: flex-start;
+    }
+    ._title-center.text-ali-center {
+      justify-content: flex-center;
+    }
+    ._title-center.text-ali-right {
+      justify-content: flex-end;
+    }
+    ._tool_right {
+      padding-left: 2px;
+      padding-right: 2px;
+    }
   }
   .tool-content {
-    width: 200px;
+    padding: 0 $paddingW;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    background: green;
   }
 }
 </style>

@@ -1,5 +1,6 @@
 $headerHeight: 54px;
 $primaryColor:#409eff;
+$paddingW:12px;
 .flex-box {
   display: flex;
 }
@@ -20,16 +21,66 @@ $primaryColor:#409eff;
   flex-direction: column-reverse;
 }
 
+.flex-box.start-item {
+  align-items: flex-start;
+}
+
 .flex-box.center-item {
   align-items: center;
+}
+
+.flex-box.end-item {
+  align-items: flex-end;
 }
 
 .flex-box.start-cotx {
   justify-content: flex-start;
 }
+
 .flex-box.center-cotx {
   justify-content: center;
 }
+
 .flex-box.end-cotx {
   justify-content: flex-end;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-ptop {
+  padding-top: 0;
+}
+
+.no-pleft {
+  padding-left: 0;
+}
+
+.no-pright {
+  padding-right: 0;
+}
+
+.no-pbottom {
+  padding-bottom: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-mtop {
+  margin-top: 0;
+}
+
+.no-mleft {
+  margin-left: 0;
+}
+
+.no-mright {
+  margin-right: 0;
+}
+
+.no-mbottom {
+  margin-bottom: 0;
 }
