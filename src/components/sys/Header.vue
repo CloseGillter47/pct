@@ -16,7 +16,7 @@
     </div>
     <div class="tool-content">
       <icon-btn icon="el-icon-search"/>
-      <kur-badge>
+      <kur-badge mode="number">
         <icon-btn icon="el-icon-bell"/>
       </kur-badge>
       <icon-btn icon="el-icon-goods"/>

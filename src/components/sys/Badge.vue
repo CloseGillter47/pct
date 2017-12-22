@@ -19,13 +19,21 @@ export default {
   },
   props: {
     mode: {
-      default: "text"
+      type: String,
+      default: "text",
+      required: true,
+      validator: val => {
+        for (let v of ["number", "text", "mini"]) {
+          if (v === val) return true;
+        }
+        return false;
+      }
     },
     count: {
       default: 1
     },
-    text:{
-      default:"新"
+    text: {
+      default: "新"
     }
   }
 };
@@ -89,11 +97,11 @@ export default {
 }
 ._badge.is-text.no-p {
   font-size: 10px;
-  padding:1px;
+  padding: 1px;
 }
 ._badge.is-text.p4 {
-  padding-left:4px;
-  padding-right:4px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 ._badge.is-text span {
   display: inline-block;
