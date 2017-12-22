@@ -39,6 +39,7 @@ export default {
   }
   button i {
     font-size: 24px;
+    line-height: 24px;
   }
 }
 </style>

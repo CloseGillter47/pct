@@ -5,22 +5,24 @@
     </div>
     <div class="title-content">
       <div class="_tool-left">
-        <icon-btn icon="el-icon-arrow-left"/>
+        <icon-btn icon="mdi mdi-menu"/>
       </div>
       <div class="_title-center">
         人工智障系统
       </div>
       <div class="_tool-right">
-        <icon-btn icon="el-icon-arrow-right"/>
+        <icon-btn icon="el-icon-search"/>
       </div>
     </div>
     <div class="tool-content">
-      <icon-btn icon="el-icon-search"/>
-      <kur-badge mode="number">
+      <kur-badge mode="mini">
         <icon-btn icon="el-icon-bell"/>
       </kur-badge>
+      <kur-badge mode="number" count="2">
+        <icon-btn icon="el-icon-message"/>
+      </kur-badge>
       <icon-btn icon="el-icon-goods"/>
-      <icon-btn icon="el-icon-more"/>
+      <icon-btn icon="mdi mdi-dots-vertical"/>
       
     </div>
   </div>

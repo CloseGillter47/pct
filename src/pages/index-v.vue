@@ -8,7 +8,7 @@
 
       </div>
       <div class="mainer-layout">
-
+        <kuroko-menu></kuroko-menu>
       </div>
     </div>
   </div>
@@ -16,6 +16,7 @@
 
 <script>
 import InsoHeader from "../components/sys/Header";
+import KurokoMenu from "../components/sys/Menu";
 
 export default {
   name: "HelloWorld",
@@ -26,7 +27,8 @@ export default {
   },
 
   components: {
-    InsoHeader
+    InsoHeader,
+    KurokoMenu
   }
 };
 </script>
