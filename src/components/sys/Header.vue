@@ -61,7 +61,7 @@ export default {
   display: flex;
   flex-direction: row;
   .logo-content {
-    width: 200px;
+    width: 240px;
     height: 100%;
     display: flex;
     flex-direction: row;

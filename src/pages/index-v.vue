@@ -5,10 +5,10 @@
     </div>
     <div class="bodyer-layout">
       <div class="asider-layout">
-
+        <kuroko-menu></kuroko-menu>
       </div>
       <div class="mainer-layout">
-        <kuroko-menu></kuroko-menu>
+        
       </div>
     </div>
   </div>
@@ -53,26 +53,21 @@ export default {
 .bodyer-layout {
   width: 100%;
   flex-grow: 2;
+  align-items: stretch;
+  display: flex;
+
+  .asider-layout {
+    height: auto;
+    width: 240px;
+    background: rgb(84, 92, 100);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .mainer-layout {
+    flex-grow: 2;
+    height: auto;
+  }
 }
 </style>
 
-<style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>
